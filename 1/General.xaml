@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="_1.General"
+             Title="General">
+
+    <ScrollView >
+        <VerticalStackLayout >
+            <Label Text="{Binding Model.Nombre}"
+                   FontAttributes="Bold"
+                   TextColor="Blue"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"
+                   Margin="0,20"/>
+            <Label Text="{Binding Model.Mensaje} "/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

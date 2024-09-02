@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="_1.Maestro"
+             Title="Maestro">
+    <ScrollView>
+        <VerticalStackLayout>
+            <CollectionView x:Name="collection"
+                            SelectionChanged="collection_SelectionChanged"
+                            SelectionMode="Single">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                            <Grid ColumnDefinitions="*,3*">
+                                <Image Source="{Binding Imagen}" 
+                                       Grid.Column="0"
+                                       Margin="5"/>
+                                <Label Text="{Binding Nombre}" 
+                                       Grid.Column="1"
+                                       Margin="5"
+                                       VerticalOptions="CenterAndExpand"
+                                       FontAttributes="Bold"/>
+                            </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
